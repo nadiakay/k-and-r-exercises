@@ -19,12 +19,14 @@ int main()
     {
       if (blanks)
       {
-        while (blanks >= TAB - cols % TAB) {
+        while (blanks >= TAB - cols % TAB)
+        {
           blanks -= (TAB - cols % TAB);
           cols += (TAB - cols % TAB);
           printf("\t");
         }
-        while (blanks > 0) {
+        while (blanks > 0)
+        {
           --blanks;
           ++cols;
           printf(" ");

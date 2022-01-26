@@ -2,7 +2,8 @@
 
 /* print a histogram of frequency of characters in input */
 
-int main() {
+int main()
+{
 
   int c, i, j;
   int ca[128];
@@ -13,7 +14,8 @@ int main() {
   while((c = getchar()) != EOF)
     ca[c]++;
   
-  for(i = 0; i < 128; ++i) {
+  for(i = 0; i < 128; ++i)
+  {
     putchar(i);
     putchar('\t');
     for(j = 0; j < ca[i]; j++)

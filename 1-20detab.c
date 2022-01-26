@@ -7,8 +7,9 @@ int main()
 {
   int c, count;
   count = 0;
-  while ((c = getchar()) != EOF && count < MAXLINE) {
-    if (c == '\t') {
+  while ((c = getchar()) != EOF && count < MAXLINE)
+    if (c == '\t')
+    {
       int i;
       for (i=0; i<TAB - count % TAB; ++i)
         putchar(' ');
@@ -22,6 +23,5 @@ int main()
       else
         ++count;
     }
-  }
   return 0;
 }

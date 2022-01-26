@@ -17,14 +17,17 @@ int main()
   while ((c = getchar()) != EOF)
     if (c == ' ' || c == '\n' || c == 't')
       i++;
-    else {
+    else
+    {
       word[i]++;
       if (word[i] > max)
         max = word[i];
     }
   printf("word count: %d\n", i);
-  for (; max > 0; --max) {
-    for (w = 0; w < LIMIT; ++w) {
+  for (; max > 0; --max)
+  {
+    for (w = 0; w < LIMIT; ++w)
+    {
       if(word[w] >= max)
         putchar('*');
       else
