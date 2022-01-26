@@ -27,7 +27,7 @@ int main()
         while (blanks > 0) {
           --blanks;
           ++cols;
-          printf("~");
+          printf(" ");
         }
       }
       putchar(c);
