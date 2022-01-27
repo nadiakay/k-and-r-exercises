@@ -1,6 +1,10 @@
-#include <stdio.h>
+/*
+ * K&R Exercise 1-14
+ *
+ * Print a histogram of the frequency of different characters in input
+ */
 
-/* print a histogram of frequency of characters in input */
+#include <stdio.h>
 
 int main()
 {

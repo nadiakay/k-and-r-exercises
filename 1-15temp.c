@@ -1,10 +1,13 @@
+/*
+ * K&R Exercise 1-15
+ *
+ * Revised temperature program using a function for conversion.
+ */
 #include <stdio.h>
 
 #define	LOWER	0
 #define	UPPER	300
 #define	STEP	20
-
-/* from text */
 
 double temp(int fahr);
 

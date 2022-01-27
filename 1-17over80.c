@@ -1,3 +1,8 @@
+/*
+ * K&R Exercise 1-17
+ *
+ * Print all input lines of over 80 characters.
+ */
 #include <stdio.h>
 #define MAXLINE 1000
 #define MINLEN 80

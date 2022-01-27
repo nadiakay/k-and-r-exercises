@@ -1,6 +1,10 @@
-#include <stdio.h>
+/*
+ * K&R Exercise 1-13
+ *
+ * Trim multiple successive spaces down to one
+ */
 
-/* trims multiple successive spaces down to one */
+#include <stdio.h>
 
 int main()
 {

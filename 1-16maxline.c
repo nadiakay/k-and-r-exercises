@@ -1,5 +1,12 @@
+/*
+ * K&R Exercise 1-21
+ *
+ * Print the length of arbitrarily long input lines, along with as much
+ * as possible of the text within the given limit.
+ */
+
 #include <stdio.h>
-#define MAXLINE 40
+#define MAXLINE 1000
 
 int getline2(char line[], int maxline);
 void copy(char to[], char from[]);

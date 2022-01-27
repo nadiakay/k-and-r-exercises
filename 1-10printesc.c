@@ -1,6 +1,10 @@
-#include <stdio.h>
+/*
+ * K&R Exercise 1-13
+ *
+ * Copy input to output, revealing escape sequences
+ */
 
-/* copy input to output, revealing escape sequences */
+#include <stdio.h>
 
 int main()
 {

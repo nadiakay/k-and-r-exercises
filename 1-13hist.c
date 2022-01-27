@@ -1,12 +1,16 @@
-#include <stdio.h>
+/*
+ * K&R Exercise 1-13
+ *
+ * Print a vertical histogram of the lengths of words in input
+ */
 
-/* print a histogram of lengths of inputted words */
+#include <stdio.h>
 
 #define LIMIT 30
 
 int main()
 {
-  int c, i, max, w;
+  int c, i, max, col;
   int word[LIMIT];
   
   c = max = 0;
@@ -15,6 +19,8 @@ int main()
 
   i = 0;
   while ((c = getchar()) != EOF)
+
+  /* read lengths of words into word[] array, keeping track of longest word */
     if (c == ' ' || c == '\n' || c == 't')
       i++;
     else
@@ -24,11 +30,17 @@ int main()
         max = word[i];
     }
   printf("word count: %d\n", i);
+
+  /* print a histogram with each column height equal to length of that word */
+ 
   for (; max > 0; --max)
   {
-    for (w = 0; w < LIMIT; ++w)
+     /* loop thru rows from the highest (corresponding to longest word) on down */
+    for (col = 0; col < LIMIT; ++col)
     {
-      if(word[w] >= max)
+    /* loop thru columns and print a '*' for each word at least as long as current row represents */
+
+      if(word[col] >= max)
         putchar('*');
       else
         putchar(' ');

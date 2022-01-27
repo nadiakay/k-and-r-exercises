@@ -1,3 +1,10 @@
+/*
+ * K&R Exercise 1-20
+ *
+ * Replace tabs in the input with the proper number of blanks to space to
+ * the next tab stop.
+ */
+
 #include <stdio.h>
 
 #define TAB 8

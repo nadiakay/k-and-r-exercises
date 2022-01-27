@@ -1,3 +1,5 @@
 # c-programming-k-and-r
 
-Solutions to exercises from *The C Programming Language, 2nd Ed.* by Kerighan and Ritchie
+Solutions to exercises from _The C Programming Language, 2nd Ed._ by Kerighan and Ritchie
+
+Excluded simplest early exercises and those not involving writing code

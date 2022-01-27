@@ -1,3 +1,9 @@
+/*
+ * K&R Exercise 1-19
+ *
+ * Reverse input a line at a time using a function reverse(s)
+ */
+
 #include <stdio.h>
 
 #define MAXLINE 1000

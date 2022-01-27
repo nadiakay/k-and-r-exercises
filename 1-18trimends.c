@@ -1,3 +1,9 @@
+/*
+ * K&R Exercise 1-18
+ *
+ * Remove trailing blanks and tabs from each line of input, and delete
+ * entirely blank lines.
+ */
 #include <stdio.h>
 #define MAXLINE 1000
 
