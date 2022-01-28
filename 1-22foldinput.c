@@ -1,5 +1,4 @@
-/* !! incomplete !!
- *
+/*
  * K&R Exercise 1-22
  *
  * Fold long input lines into multiple shorter lines after the last non-blank
@@ -23,35 +22,43 @@ int main()
   while ((c = getchar()) != EOF)
   {
     if (c == '\t')
-    {
       if (word_len > 0)
         printword = 1;
       else
         blanks += (TAB - (cols + word_len + blanks) % TAB);
-    }
     else if (c == ' ')
-    {
       if (word_len > 0)
         printword = 1;
       else
         ++blanks;
-    }
     else if (c == '\n')
-    {
-      putchar(c);
       if (word_len > 0)
         printword = 1;
-    }
+      else {
+        putchar(c);
+        cols = 0;
+        blanks = 0;
+      }
     else
-    {
       word[word_len++] = c;
-    }
+
     if (printword)
     {
-      if (cols + blanks + word_len > MAXLINE)
+      if (word_len > MAXLINE)
+        for (int i = 0; i < word_len; i++)
+        {
+          if(cols + 1 == MAXLINE)
+          {
+            printf("-\n");
+            cols = 0;
+          }
+          putchar(word[i]);
+          cols++;
+        }
+      else if (cols + blanks + word_len > MAXLINE)
       {
         printf("\n%s", word);
-        cols = 0, blanks = 0;
+        cols = word_len, blanks = 0;
       }
       else
       {
@@ -74,40 +81,17 @@ int main()
         word[i] = 0;
       word_len = 0;
       if (c=='\t')
-        blanks += (TAB - (cols + word_len + blanks) % TAB);
+        blanks += (TAB - cols % TAB);
       else if (c==' ')
         blanks++;
+      else if (c=='\n')
+      {
+        putchar(c);
+        cols = 0;
+      }
+      printword = 0;
     }
   }
 
   return 0;
-}
-
-void print_word (char word[], int cols, int blanks, int word_len)
-{
-  if (cols + blanks + word_len > MAXLINE)
-  {
-    printf("\n%s", word);
-    cols = 0, blanks = 0;
-  }
-  else
-  {
-    while (blanks >= TAB - cols % TAB)
-    {
-      blanks -= (TAB - cols % TAB);
-      cols += (TAB - cols % TAB);
-      putchar('\t');
-    }
-    while (blanks > 0)
-    {
-      --blanks;
-      ++cols;
-      putchar(' ');
-    }
-    printf("%s", word);
-    cols += word_len;
-  }
-    for (int i = 0; i < word_len; i++)
-      word[i] = 0;
-    word_len = 0;
 }
