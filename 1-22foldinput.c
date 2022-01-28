@@ -11,8 +11,6 @@
 #define MAXLINE 20
 #define TAB 8
 
-void print_word (char word[], int cols, int blanks, int word_len);
-
 int main()
 {
   int c;
